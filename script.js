@@ -65,7 +65,7 @@ const animeData = {
         cast: "Gakuto Kajiwara, Nobunaga Shimazaki",
         videos: [
             { title: "Trailer", src: "video/trailer/Black_Clover_Trailer.mp4" },
-            { title: "Episode 1", src: "video/trailer/_ONE_PIECE _ Trailer.mp4" }
+            { title: "Episode 1", src: "video/trailer/Black_Clover_Trailer.mp4" }
         ]
 
     },
