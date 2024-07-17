@@ -1,274 +1,461 @@
 body {
-    background-color: black;
-    color: #f8f8f2;
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
-}
-
-.details-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.details-content {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.details-left {
-    margin-right: 20px;
-}
-
-.anime-poster {
-    width: 200px;
-    height: auto;
-    border: 2px solid #f00;
-
-}
-
-.anime-title {
-    color: #ffd700;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.anime-info {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.rating {
-    color: #ffd700;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.tag {
-    background-color: #ffd700;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.anime-seasons,
-.anime-description,
-.anime-genres,
-.anime-cast {
-    margin-bottom: 20px;
-}
-
-.share {
-    display: flex;
-    align-items: center;
-}
-
-.share span {
-    margin-right: 10px;
-}
-
-.share-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.details-footer {
-    background-color: #f00;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.support-message {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.episode-list-container {
-    max-width: 75rem;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-}
-
-.episode-list-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.episode-list-header img {
-    width: 80px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 20px;
-}
-
-.episode-list-header h1 {
-    font-size: 24px;
     margin: 0;
+    padding: 0;
 }
-
-.episode-list-header p {
-    font-size: 14px;
-    color: #bbb;
+::-webkit-scrollbar{
+    width: 10px;
 }
-
-.episode-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #333;
+::-webkit-scrollbar-track{
+    background-color: rgb(79, 78, 78);
 }
-
-.episode-item img {
-    width: 50px;
-    height: auto;
-    border-radius: 4px;
-    margin-right: 20px;
-}
-
-.episode-info {
-    display: flex;
-    align-items: center;
-}
-
-.episode-title {
-    font-size: 16px;
-    color: #fff;
-}
-
-.watch-button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
+::-webkit-scrollbar-thumb{
+    background-color: #f00;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+    margin: 0 40px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, opacity 0.3s;
     
 }
-
-
-.watch-button:hover {
-    background-color: #888;
-    color: #ff0;
+.navbar.transparent {
+    background-color: rgba(51, 51, 51, 0.3);
+}
+.navbar .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from the link */
+}
+.logo-text {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.watch-button.active {
-    background-color: #ff0;
-    color: #000;
-}
-/* CSS for the video player modal */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 40px;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
-   
-}
-
-.modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 80%;
-    max-width: 800px;
-    background-color: #000;
-    color: white;
-    border-radius: 8px;
-    border: #f00 solid 5px;
-}
-
-/* .close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+.logo-text .anime {
+    color: red;
+    font-size: 24px; /* Adjust the font size as needed */
     font-weight: bold;
-    cursor: pointer;
-} */
+}
 
-/* .close:hover,
-.close:focus {
+.logo-text .thunder {
+    color: yellow;
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 0 5px; /* Adjust spacing between words and symbol */
+}
+
+.logo-text .mania {
+    color: white;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+}
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    transition: visibility 0.3s, opacity 0.3s; /* Add transition for smoothness */
+    visibility: visible; /* Ensure nav-links are initially visible */
+    opacity: 1; /* Ensure nav-links are initially opaque */
+}
+.navbar .nav-links a {
     color: #fff;
     text-decoration: none;
-    cursor: pointer;
-} */
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-video {
-    width: 100%;
-    border-bottom: 1px solid #444;
-}
-
-.video-controls {
-    display: flex;
-    justify-content: center;
+.nav-links a:hover {
+    background-color: #f00;
+    color: #fff;
+    border-radius: 15px;
+    border: white solid 3px;
     padding: 10px;
 }
-
-.video-controls button {
-    margin: 0 10px;
-    padding: 10px 20px;
+.navbar .nav-options input {
+    padding: 5px;
     font-size: 16px;
-    background-color: #444;
-    color: white;
+}
+.navbar .nav-options .like-btn {
+    background-color: #f00;
     border: none;
-    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
     cursor: pointer;
 }
-
-.video-controls button:hover {
-    background-color: #666;
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 8px;
 }
-.video-container {
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.carousel-item {
+    position: absolute;
+    width: 400px;
+    /* max-width: 100px; */
+    height: 270px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.carousel-item img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #f00;
+    float: left;
+}
+.carousel-item .info {
+    width: 40%;
+    height: 100%;
+    padding: 5px;
+    float: right;
+    color: #fff;
+    margin: 0px;
+}
+.carousel-item .carousel-watch-btn {
+    background-color: #f00;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 40%;
+    text-align: center;
+    margin-left: 12px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.carousel-watch-btn:hover {
+    background-color: #fff;
+    color: #f00;
+}
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(241, 235, 235, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+.carousel-arrow.left {
+    left: 10px;
+}
+.carousel-arrow.right {
+    right: 10px;
+}
+@keyframes carousel {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
+.carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(500px); }
+.carousel-item:nth-child(2) { transform: rotateY(45deg) translateZ(500px); }
+.carousel-item:nth-child(3) { transform: rotateY(90deg) translateZ(500px); }
+.carousel-item:nth-child(4) { transform: rotateY(135deg) translateZ(500px); }
+.carousel-item:nth-child(5) { transform: rotateY(180deg) translateZ(500px); }
+.carousel-item:nth-child(6) { transform: rotateY(225deg) translateZ(500px); }
+.carousel-item:nth-child(7) { transform: rotateY(270deg) translateZ(500px); }
+.carousel-item:nth-child(8) { transform: rotateY(315deg) translateZ(500px); }
+.carousel-item { opacity: 1; }
+.carousel-item:nth-child(1) { opacity: 1; }
+.carousel-item:nth-child(2) { opacity: 1; }
+.carousel-item:nth-child(3) { opacity: 1; }
+.carousel-item:nth-child(4) { opacity: 1; }
+.carousel-item:nth-child(5) { opacity: 1; }
+.carousel-item:nth-child(6) { opacity: 1; }
+.carousel-item:nth-child(7) { opacity: 1; }
+.carousel-item:nth-child(8) { opacity: 1; }
+.section-heading {
+    background-color: #f00;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+}
+.anime-grid {
+    background-image: url(/project2/resources/allanime.jpg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 10px;
+    margin: 40px;
+}
+.anime-card {
+    background-color: #111;
+    border: 2px solid #f00;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    height: auto;
+    width: 70%;
+    box-shadow: #000 0px 7px 29px 0px;
+    transition: all 0.3s ease-in-out;
+}
+.anime-card:hover {
+    transform: translateY(-40px);
+    box-shadow: 0 0 20px #e73007, 0 0 40px #00fffc;
+}
+.anime-card img {
+    width: 100%;
+    height: auto;
+    transition-property: all ease 0.4s;
+}
+.anime-info {
     margin-top: 10px;
 }
-
-.video-controls {
-    margin-top: 5px;
+.anime-info p {
+    margin: 10px 0;
 }
-
-.video-controls button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    background-color: #ff4b2b;
-    color: white;
+.grid-watch-btn {
+    width: 100px;
+}
+.grid-watch-btn,
+.view-all-btn {
+    grid-column: 1 / -1;
+    background-color: #f00;
     border: none;
-    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
     cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.grid-watch-btn:hover,
+.view-all-btn:hover {
+    background-color: #fff;
+    color: #f00;
+}
+.view-all {
+    align-items: center;
+}
+.anime-row {
+    background-image: url(/project2/resources/allanime.jpg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 40px;
+}
+.row-card {
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    border: 2px solid #f00;
+    padding: 10px;
+    color: #fff;
+    box-shadow: #000 0px 7px 29px 0px;
+    transition: all 0.3s ease-in-out;
+}
+.row-card img {
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+}
+.row-card .anime-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.row-card .anime-info p {
+    margin: 10px 0;
+}
+.row-card .grid-watch-btn {
+    margin-top: 10px;
+    width: 100px;
+}
+.row-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #e73007, 0 0 40px #00fffc;
+}
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    color: #f00;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer-section .socials img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #f00;
+}
+@media (max-width: 1024px) {
+    .anime-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .carousel-item {
+        width: 300px;
+        height: 200px;
+    }
+    .carousel-item img {
+        width: 50%;
+    }
+    .carousel-item .info {
+        width: 50%;
+    }
+}
+@media (max-width: 768px) {
+    /* .navbar {
+        flex-direction: column;
+        height: auto;
+    } */
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+    .navbar .nav-links a {
+        margin: 10px 5px;
+        font-size: 18px;
+    }
+    .hamburger {
+        display: block;
+    }
+    .carousel {
+        flex-direction: column;
+    }
+    .carousel-container {
+        width: 100%;
+    }
+    .carousel-item {
+        width: 250px;
+        height: 150px;
+    }
+    .carousel-item img {
+        width: 50%;
+    }
+    .carousel-item .info {
+        width: 50%;
+    }
+    .anime-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 100%;
+        height: auto;
+    }
+    .carousel-item img {
+        width: 50%;
+    }
+    .carousel-item .info {
+        width: 50%;
+    }
+    .navbar .logo img {
+        height: 40px;
+        width: 40px;
+    }
+    .navbar .nav-links a {
+        font-size: 16px;
+        margin: 5px;
+    }
+    .anime-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.video-controls button:hover {
-    background-color: #ff6b4b;
-}
+ 
+
